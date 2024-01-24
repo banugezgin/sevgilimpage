@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gib FX</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <style>
+    body {
+      font-family: 'Helvetica', sans-serif;
+      margin: 0; 
+      color: #541212;
+    }
+
+    .header-container {
+      display: flex;
+      align-items: center;
+      padding-left: 2rem; 
+      padding-top: 7rem;
+      padding-bottom: 3rem;
+      background-color: #EDEDED;
+    }
+
+    h1 {
+      margin: 0; 
+    }
+
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 7rem;
+      text-align: left;
+    }
+
+    .image-item {
+      width: 100%;
+      overflow: hidden;
+      border-radius: 8px;
+      background-color: #EDEDED;
+    }
+
+    .image-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 8px 8px 0 0;
+    }
+
+    .image-caption {
+      padding: 1rem;
+      background-color: #f0f0f0;
+      border-radius: 0 0 8px 8px;
+    }
+
+    .image-container  {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-left: 10rem;
+      padding-right: 10rem;
+      padding-top: 8rem;
+      padding-bottom: 8rem;
+      background-color: #444444;
+    }   
+
+    .image-item.boss {
+      position: relative; 
+      width: 100%; 
+      overflow: hidden;
+      border-radius: 8px;
+      background-color: #EDEDED;
+      min-height: 50rem;
+      grid-column: span 2;
+    }
+
+    .image-item.boss video {
+      width: 100%; 
+      height: 100%;
+      object-fit: cover; 
+      border-radius: 8px;
+      padding-bottom: 6rem;
+    }
+
+    .image-item.boss .image-caption {
+      position: absolute;
+      bottom: 0; 
+      width: 100%;
+      padding: 1rem;
+      background-color: #f0f0f0;
+      border-radius: 0 0 8px 8px;
+    }
+
+
+    /* Responsive for mobile phones */
+    @media (max-width: 800px) {
+    .image-grid {
+      grid-template-columns: 1fr;
+    }
+    .image-container  {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }     
+
+    h1 {
+      font-size: 1.5rem; 
+    }
+
+    .image-caption p {
+      font-size: 1rem; 
+    }
+
+    .image-item.boss {
+      min-height: 50rem;
+      grid-column: span 1;
+    }
+
+  }
+
+  </style>
+</head>
+<body>
+
+<div class="nav-bar">
+  <nav class="navbar navbar-expand-lg fixed-top bg-dark border-bottom border-body" data-bs-theme="dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">GIB FX</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Portfolio
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="boss.html">BOSS Bottled</a></li>
+              <li><a class="dropdown-item" href="#">Cosy Night Ruined by DINO</a></li>
+              <li><a class="dropdown-item" href="#">Frosty Guinness</a></li>
+              <li><a class="dropdown-item" href="#">Ghostbuster Trap</a></li>
+              <li><a class="dropdown-item" href="#">Berol Pen</a></li>
+              <li><a class="dropdown-item" href="#">Glass Half Full</a></li>
+              <li><a class="dropdown-item" href="#">Quiet Rain</a></li>
+            </ul>
+          </li>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<div class="header-container">
+  <h1>PORTFOLIO:</h1>
+</div>
+
+<div class="image-container">
+
+  <div class="image-grid">
+
+
+    <div class="image-item boss">
+      <video controls autoplay loop muted>
+        <source src="finalboss.mp4" type="video/mp4">
+    </video>
+      <div class="image-caption">
+        <p style="font-weight: bold;">BOSS Bottled</p>
+        <p>21 January 2024</p>
+      </div>
+    </div>
+
+    <div class="image-item boss">
+      <video controls autoplay loop muted>
+        <source src="dinorender.mp4" type="video/mp4">
+    </video>
+      <div class="image-caption">
+        <p style="font-weight: bold;">Cosy Night Ruined by DINO</p>
+        <p>14 January 2024</p>
+      </div>
+    </div>
+    
+    <div class="image-item">
+      <img src="guinness.jpg" alt="Frosty Guinness">
+      <div class="image-caption">
+        <p style="font-weight: bold;">Frosty Guinness</p>
+        <p>01 January 2024</p>
+      </div>
+    </div>
+    
+    <div class="image-item">
+      <img src="christmas.jpg" alt="Merry Christmas">
+      <div class="image-caption">
+        <p style="font-weight: bold;">Merry Christmas</p>
+        <p>25 December 2023</p>
+      </div>
+    </div>    
+    
+    <div class="image-item">
+      <img src="image1.jpg" alt="Ghostbuster Trap">
+      <div class="image-caption">
+        <p style="font-weight: bold;">Ghostbuster Trap</p>
+        <p>11 December 2023</p>
+      </div>
+    </div>
+    
+    <div class="image-item">
+      <img src="image2.jpg" alt="Berol Pen">
+      <div class="image-caption">
+        <p style="font-weight: bold;">Berol Pen</p>
+        <p>02 December 2023</p>
+      </div>
+    </div>
+    
+    <div class="image-item">
+      <img src="image3.jpg" alt="Glass Half Full">
+      <div class="image-caption">
+        <p style="font-weight: bold;">Glass Half Full</p>
+        <p>26 November 2023</p>
+      </div>
+    </div>
+    
+    <div class="image-item">
+      <img src="image4.jpg" alt="Quiet Rain">
+      <div class="image-caption">
+        <p style="font-weight: bold;">Quiet Rain</p>
+        <p>19 November 2023</p>
+      </div>
+    </div>
+
+    <div class="image-item">
+      <img src="anvil.jpeg" alt="Anvil">
+      <div class="image-caption">
+        <p style="font-weight: bold;">Anvil</p>
+        <p>02 November 2023</p>
+      </div>
+    </div>
+
+    <div class="image-item">
+      <img src="camera.jpeg" alt="Camera">
+      <div class="image-caption">
+        <p style="font-weight: bold;">Camera</p>
+        <p>23 October 2023</p>
+      </div>
+    </div>
+  
+  </div>
+</div>
+
+<div class="container">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+      <div class="col-md-4 d-flex align-items-center">
+        <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+          <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+        </a>
+        <span class="mb-3 mb-md-0 text-body-secondary">© 2023 GIB FX, Inc</span>
+      </div>
+  
+      <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+        <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
+        <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
+        <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
+      </ul>
+    </footer>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-GLhlTQ8iK6c8s5VFD1Zl3/Jp1I5ZL7f8GGGEdBrbhpEFIapalhFAeCE1b1NW92C6" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  
+  </body>
+</html>
